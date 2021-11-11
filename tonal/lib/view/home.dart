@@ -18,13 +18,26 @@ class Home extends StatelessWidget {
               height: bubbleDiameter,
               width: bubbleDiameter,
               decoration: bubbleBoxDecoration,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
+              child: Stack(
                 children: const [
-                  Text('Upper Body', style: labelTextStyle),
-                  Text('45', style: weightTextStyle),
-                  Text('lbs', style: unitTextStyle),
+                  Padding(
+                    padding: EdgeInsets.only(top: bubbleDiameter * 0.17),
+                    child: Align(
+                      alignment: Alignment.topCenter,
+                      child: Text('Upper Body', style: labelTextStyle),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Text('45', style: weightTextStyle),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(bottom: bubbleDiameter * 0.1),
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Text('lbs', style: unitTextStyle),
+                    ),
+                  ),
                 ],
               ),
             ),
