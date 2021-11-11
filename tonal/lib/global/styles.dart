@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const bubbleDiameter = 272;
+const double bubbleDiameter = 272;
 
 const bubbleBoxDecoration = BoxDecoration(
   color: Color(0xff53a99a),
