@@ -1,0 +1,21 @@
+.bubble {
+  background: rgba(11, 133, 111, 0.7);
+  box-shadow: 0 27px 33px 0 rgba(39, 174, 150, 0.22);
+  width: 272px;
+  height: 272px;
+}
+
+.label {
+  font-size: 19px;
+  color: white;
+}
+
+.weight {
+  font-size: 127px;
+  color: white;
+}
+
+.unit {
+  font-size: 38px;
+  color: rgba(255, 255, 255, 0.5);
+}
