@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 const double bubbleDiameter = 272;
+
+String assetName = 'assets/graph.svg';
+Widget svg = SvgPicture.asset(
+  assetName,
+  semanticsLabel: 'graph bubble',
+);
 
 const bubbleBoxDecoration = BoxDecoration(
   color: Color(0xff53a99a),
