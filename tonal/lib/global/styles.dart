@@ -44,3 +44,10 @@ const unitTextStyle = TextStyle(
   fontWeight: FontWeight.w500,
   color: Color(0x80ffffff),
 );
+
+const scrollItemTextStyle = TextStyle(
+  fontFamily: 'Helvetica',
+  fontWeight: FontWeight.w500,
+  fontSize: 20,
+  color: Colors.white,
+);

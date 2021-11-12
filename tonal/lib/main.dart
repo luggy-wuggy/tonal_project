@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider<BubbleProvider>(
       create: (context) => BubbleProvider(),
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Tonal Widget Challenge',
         theme: ThemeData(),
         home: const Home(),
       ),
