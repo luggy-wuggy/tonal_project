@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 const double bubbleDiameter = 272;
@@ -29,13 +30,17 @@ const labelTextStyle = TextStyle(
 );
 
 const weightTextStyle = TextStyle(
+  letterSpacing: -10,
   fontFamily: 'League Gothic',
   fontSize: 127,
+  fontWeight: FontWeight.w600,
   color: Colors.white,
 );
 
 const unitTextStyle = TextStyle(
+  letterSpacing: -2,
   fontFamily: 'League Gothic',
   fontSize: 38,
+  fontWeight: FontWeight.w500,
   color: Color(0x80ffffff),
 );
