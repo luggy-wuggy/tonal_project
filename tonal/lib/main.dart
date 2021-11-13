@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
 import 'package:tonal/bloc/bubble_provider.dart';
 import 'package:tonal/view/home.dart';
-import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
         title: 'Tonal Widget Challenge',
         theme: ThemeData(),
         home: const Home(),
+        debugShowCheckedModeBanner: false,
       ),
     );
   }

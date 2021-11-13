@@ -1,10 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tonal/bloc/bubble_bloc.dart';
-import 'package:tonal/bloc/bubble_provider.dart';
-import 'package:tonal/global/bubble_options.dart';
-import 'package:tonal/global/styles.dart';
-import 'package:provider/provider.dart';
+
 import 'package:tonal/widgets/bubble.dart';
 import 'package:tonal/widgets/label_button.dart';
 import 'package:tonal/widgets/weight_button.dart';

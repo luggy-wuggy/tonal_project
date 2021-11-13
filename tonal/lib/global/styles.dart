@@ -4,9 +4,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 const double bubbleDiameter = 272;
 
-String assetName = 'assets/graph.svg';
-Widget svg = SvgPicture.asset(
-  assetName,
+const String graph = 'assets/graph.svg';
+final Widget graphSVG = SvgPicture.asset(
+  graph,
   semanticsLabel: 'graph bubble',
 );
 
@@ -30,19 +30,19 @@ const labelTextStyle = TextStyle(
 );
 
 const weightTextStyle = TextStyle(
-  letterSpacing: -10,
   fontFamily: 'League Gothic',
   fontSize: 127,
   fontWeight: FontWeight.w600,
   color: Colors.white,
+  letterSpacing: -10,
 );
 
 const unitTextStyle = TextStyle(
-  letterSpacing: -2,
   fontFamily: 'League Gothic',
   fontSize: 38,
   fontWeight: FontWeight.w500,
   color: Color(0x80ffffff),
+  letterSpacing: -2,
 );
 
 const scrollItemTextStyle = TextStyle(

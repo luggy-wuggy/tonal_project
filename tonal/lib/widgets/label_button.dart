@@ -58,10 +58,10 @@ class _LabelButtonState extends State<LabelButton> {
                           height: 220,
                           child: CupertinoPicker(
                             scrollController: _labelScrollController,
-                            itemExtent: 40,
+                            itemExtent: 50,
                             onSelectedItemChanged: (int index) {},
                             children: labelList.map((e) {
-                              return Text(e, style: scrollItemTextStyle);
+                              return Center(child: Text(e, style: scrollItemTextStyle));
                             }).toList(),
                           ),
                         ),

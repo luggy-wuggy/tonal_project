@@ -17,6 +17,12 @@ class _BubbleState extends State<Bubble> {
   late BubbleBloc _bubbleBloc;
 
   @override
+  void dispose() {
+    _bubbleBloc.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     _bubbleBloc = Provider.of<BubbleProvider>(context).bloc;
 
@@ -33,7 +39,14 @@ class _BubbleState extends State<Bubble> {
               child: StreamBuilder<Object>(
                 stream: _bubbleBloc.labelObservable,
                 builder: (context, snapshot) {
-                  return Text('${snapshot.data}', style: labelTextStyle);
+                  bool hasLabel = snapshot.hasData || snapshot.data == 'null';
+
+                  return hasLabel
+                      ? Text(
+                          '${snapshot.data}',
+                          style: labelTextStyle,
+                        )
+                      : Container();
                 },
               ),
             ),
@@ -43,10 +56,14 @@ class _BubbleState extends State<Bubble> {
             child: StreamBuilder<Object>(
               stream: _bubbleBloc.weightObservable,
               builder: (context, snapshot) {
-                return Text(
-                  '${snapshot.data}',
-                  style: weightTextStyle,
-                );
+                bool hasWeight = snapshot.hasData || snapshot.data == 'null';
+
+                return hasWeight
+                    ? Text(
+                        '${snapshot.data}',
+                        style: weightTextStyle,
+                      )
+                    : const CircularProgressIndicator(color: Colors.white);
               },
             ),
           ),
@@ -54,14 +71,17 @@ class _BubbleState extends State<Bubble> {
             padding: EdgeInsets.only(bottom: bubbleDiameter * 0.1),
             child: Align(
               alignment: Alignment.bottomCenter,
-              child: Text('lbs', style: unitTextStyle),
+              child: Text(
+                'lbs',
+                style: unitTextStyle,
+              ),
             ),
           ),
           Align(
             alignment: Alignment.bottomCenter,
             child: ClipPath(
               clipper: GraphBubbleClipper(),
-              child: svg,
+              child: graphSVG,
             ),
           ),
         ],
@@ -70,6 +90,10 @@ class _BubbleState extends State<Bubble> {
   }
 }
 
+/// A clipper class to shape the graph svg into the Bubble's circle. \
+/// Currently only fits to the set bubble diameter of 272. \
+/// \
+/// TODO: make clipper dynamic to any bubble diameter size
 class GraphBubbleClipper extends CustomClipper<Path> {
   @override
   Path getClip(
