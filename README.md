@@ -1,4 +1,9 @@
 # Tonal - UI Coding Challenge
+<p float="left">
+  <img src="https://github.com/luggy-wuggy/tonal_project/blob/master/tonal%20screenshot/1.png" width="300">
+  <img src="https://github.com/luggy-wuggy/tonal_project/blob/master/tonal%20screenshot/2.png" width="300">
+  <img src="https://github.com/luggy-wuggy/tonal_project/blob/master/tonal%20screenshot/3.png" width="300">
+</p>
 
 This Metrics Bubble coding challenge can be completed with the toolchain of your choice. We included complete requirements for Flutter and web, but if you prefer to show off your skills in Swift (iOS), Kotlin (Android), or React Native please feel free to adapt this exercise by translating the requirements for that toolchain. You only need to complete this exercise once.
 
